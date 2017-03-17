@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.AppCompat.Dark.Fullscreen" parent="Theme.AppCompat">
+
+        <item name="windowActionBar">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/colorBlack</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+    </style>
+
+
+
+    <style name="timerstyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">"00:00:00"</item>
+        <item name="android:textSize">100dp</item>
+        <item name="android:background">@color/colorTP</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="buttonstyle">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/button_img</item>
+    </style>
+
+    <style name="Theme.AppTheme" parent="Theme.AppCompat" />
+
+    <style name="Apptheme.noactionbar.dark" parent="AppTheme.NoActionBar" >
+        <item name="colorPrimary">@color/colorBlack</item>
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorPrimaryInverse">@android:color/secondary_text_light</item>
+        <item name="colorAccent">@color/colorBlack</item>
+        <item name="android:windowBackground">@color/colorBlack</item>
+        <item name="android:textColorSecondaryInverse">@android:color/secondary_text_dark</item>
+    </style>
+
+</resources>

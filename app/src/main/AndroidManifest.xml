@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.abe.timer1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Dark.Fullscreen">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="sensorLandscape"
+            android:label="Timer1"
+            android:theme="@style/Apptheme.noactionbar.dark">
+            <intent-filter
+                android:label="Timer1">
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SubActivity"
+            android:screenOrientation="sensorLandscape"
+            android:label="Chart"
+            android:theme="@style/AppTheme">
+
+        </activity>
+    </application>
+
+</manifest>

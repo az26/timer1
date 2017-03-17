@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.abe.timer1.MainActivity">
+    <item
+        android:id="@+id/graph"
+        android:orderInCategory="100"
+        android:title="グラフ"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/save"
+        android:orderInCategory="100"
+        android:title="保存"></item>
+    <item
+        android:id="@+id/exit"
+        android:orderInCategory="100"
+        android:title="終了"></item>
+</menu>
