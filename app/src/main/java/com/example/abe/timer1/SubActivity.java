@@ -17,7 +17,9 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.BarLineScatterCandleBubbleDataSet;
 import com.github.mikephil.charting.data.CombinedData;
+import com.github.mikephil.charting.data.DataSet;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
@@ -236,8 +238,8 @@ public class SubActivity extends AppCompatActivity {
                 break;
 
             case R.id.set1:
-                deleteFile("data.csv");
-                deleteFile("lastdata.csv");
+                //deleteFile("data.csv");
+                //deleteFile("lastdata.csv");
                 break;
 
             default:

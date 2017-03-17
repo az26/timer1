@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
     private boolean add = false;
     private String dateText;
 
+    private int period = 100;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
 
         File file = this.getFileStreamPath("lastdata.csv");
         boolean f = file.exists();
-        System.out.println(f);
         if(f == true) {lastData();}
 
         st.setOnClickListener(new View.OnClickListener() {
@@ -167,13 +168,13 @@ public class MainActivity extends AppCompatActivity {
     public void countUpC(){
         ctimer = new Timer();
         ctask = new countTimerC(MainActivity.this, R.id.timerc, R.id.total, countc,countt,R.id.percentage);
-        ctimer.schedule(ctask,0,100);
+        ctimer.schedule(ctask,0,period);
     }
 
     public void countUpD(){
         dtimer = new Timer();
         dtask = new countTimerD(MainActivity.this, R.id.timerd, R.id.total, countd,countt,R.id.percentage);
-        dtimer.schedule(dtask,0,100);
+        dtimer.schedule(dtask,0,period);
     }
 
     public void cancelC(){
@@ -321,24 +322,16 @@ public class MainActivity extends AppCompatActivity {
         st.nextToken();
         int s = Integer.parseInt(st.nextToken());
 
-        long hh = countc/36000;
-        long mm = (countc%36000)/600;
-        long ss = (countc-36000*hh-600*mm)/10;
-        btnc.setText(String.format("%02d:%02d:%02d",hh,mm,ss));
+        long c[] = timeCount(countc);
+        btnc.setText(String.format("%02d:%02d:%02d",c[0],c[1],c[2]));
 
-        hh = countd/36000;
-        mm = (countd%36000)/600;
-        ss = (countd-36000*hh-600*mm)/10;
-        btnd.setText(String.format("%02d:%02d:%02d",hh,mm,ss));
+        long d[] = timeCount(countd);
+        btnd.setText(String.format("%02d:%02d:%02d",d[0],d[1],d[2]));
 
-        countt = countc + countd;
-        hh = countt/36000;
-        mm = (countt%36000)/600;
-        ss = (countt-36000*hh-600*mm)/10;
-        tview.setText(String.format("Total %02d:%02d:%02d",hh,mm,ss));
+        long t[] = timeCount(countt = countc + countd);
+        tview.setText(String.format("%02d:%02d:%02d",t[0],t[1],t[2]));
 
-        long p = (countc*100)/(countt);
-        pview.setText(String.format("%d %%",p));
+        pview.setText(String.format("%d %%",(countc*100)/(countt)));
 
         if(s == 1){
             sw = true;
@@ -350,6 +343,16 @@ public class MainActivity extends AppCompatActivity {
             cChangeTextSize(true,btnc);
         }
         first = false;
+    }
+
+    public long[] timeCount(long c){
+        int countMin = 1000/period;
+        int hms[] = {3600*countMin,60*countMin,countMin};
+        long time[] = new long[3];
+        time[0]  = c/hms[0];
+        time[1] = (c%hms[0])/hms[1];
+        time[2]= (c-hms[0]*time[0]-hms[1]*time[1])/hms[2];
+        return time;
     }
 
     public void generatelastdata(){
@@ -438,7 +441,6 @@ public class MainActivity extends AppCompatActivity {
             OutputStream out =null;
             OutputStreamWriter writer = null;
             BufferedWriter bw = null;
-
 
             try{
                 out = openFileOutput("data.csv",MODE_APPEND);
