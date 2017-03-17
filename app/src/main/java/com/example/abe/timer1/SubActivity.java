@@ -34,6 +34,7 @@ import java.util.StringTokenizer;
 
 /**
  * Created by abe on 17/03/02.
+ * gittest
  */
 
 public class SubActivity extends AppCompatActivity {
