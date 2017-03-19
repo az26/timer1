@@ -14,25 +14,35 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/ttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Total "
+            android:textColor="@color/ctimer"
+            android:textSize="20dp" />
+
+        <TextView
             android:id="@+id/total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total 00:00:00"
-            android:textSize="20dp"
-            android:layout_centerInParent="true"
-            android:textColor="@color/ctimer"/>
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ttext"
+            android:text="00:00:00"
+            android:textColor="@color/ctimer"
+            android:textSize="20dp" />
 
 
         <TextView
             android:id="@+id/percentage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100 %"
-            android:textSize="20dp"
-            android:layout_toLeftOf="@id/total"
-            android:layout_marginRight="20dp"
             android:layout_centerVertical="true"
-            android:textColor="@color/ctimer"/>
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/ttext"
+            android:text="100 %"
+            android:textColor="@color/ctimer"
+            android:textSize="20dp" />
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="wrap_content"
@@ -44,10 +54,10 @@
                 android:id="@+id/toolbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#000000"
-                app:titleTextColor="@color/colorBlack"
                 android:layout_alignParentRight="true"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                android:background="#000000"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextColor="@color/colorBlack" />
         </android.support.design.widget.AppBarLayout>
 
 
