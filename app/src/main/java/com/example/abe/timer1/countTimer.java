@@ -45,7 +45,7 @@ public class countTimer extends TimerTask {
         long tm = ((total+count)%36000)/600;
         long ts = ((total+count)-36000*th-600*tm)/10;
         timertext.setText(String.format("%02d:%02d:%02d",hh,mm,ss));
-        totaltext.setText(String.format("Total %02d:%02d:%02d",th,tm,ts));
+        totaltext.setText(String.format("%02d:%02d:%02d",th,tm,ts));
     }
 
     public long getCount(){return count;}

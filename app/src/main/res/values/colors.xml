@@ -6,7 +6,7 @@
     <color name="colorTP">#00000000</color>
     <color name="colorBlack">#ff000000</color>
     <color name="timerfalse">#1affffff</color>
-    <color name="ctimer">#cfffffff</color>
+    <color name="ctimer">#5fffffff</color>
     <color name="dtimer">#ffff1111</color>
     <color name="colorWhite">#ffffffff</color>
 </resources>

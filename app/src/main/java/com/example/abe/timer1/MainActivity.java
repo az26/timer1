@@ -492,7 +492,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch (id) {
             case R.id.graph:
-                stop();
+                if (countt != 0) {save();}
+                else{stop();}
                 Intent intent = new Intent(MainActivity.this, SubActivity.class);
                 startActivity(intent);
                 break;
