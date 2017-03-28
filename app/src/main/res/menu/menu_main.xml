@@ -5,14 +5,14 @@
     <item
         android:id="@+id/graph"
         android:orderInCategory="100"
-        android:title="グラフ"
+        android:title="Chart"
         app:showAsAction="never" />
     <item
         android:id="@+id/save"
         android:orderInCategory="100"
-        android:title="保存"></item>
+        android:title="Save"></item>
     <item
         android:id="@+id/exit"
         android:orderInCategory="100"
-        android:title="終了"></item>
+        android:title="Quit"></item>
 </menu>
