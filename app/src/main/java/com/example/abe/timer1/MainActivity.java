@@ -283,6 +283,7 @@ public class MainActivity extends AppCompatActivity {
                 if(valdate.equals(dateText)){
                     /*ダイアログ表示
                     syncDialog(line);
+                    
                      */
                     dataSync(line);
                 }
