@@ -283,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
                 if(valdate.equals(dateText)){
                     /*ダイアログ表示
                     syncDialog(line);
-                    
+
                      */
                     dataSync(line);
                 }
@@ -347,6 +347,7 @@ public class MainActivity extends AppCompatActivity {
             cChangeTextSize(true,btnc);
         }
         first = false;
+        add = true;
     }
 
     public long[] timeCount(long c){
@@ -437,6 +438,9 @@ public class MainActivity extends AppCompatActivity {
 
             while ((line = br.readLine()) != null){
                 str.add(line);
+                /* print csv
+                System.out.println(line);
+                */
                 ln++;
             }
 
