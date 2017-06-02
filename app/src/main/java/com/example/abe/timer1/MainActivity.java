@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         if (countt == 0) {
         }else {
-            save();
+            //save();
         }
     }
 
@@ -438,19 +438,19 @@ public class MainActivity extends AppCompatActivity {
 
             while ((line = br.readLine()) != null){
                 str.add(line);
-                /* print csv
-                System.out.println(line);
-                */
+                // print csv
+                //System.out.println(line);
+
                 ln++;
             }
 
-            deleteFile("data.csv");
 
             OutputStream out =null;
             OutputStreamWriter writer = null;
             BufferedWriter bw = null;
 
             try{
+                deleteFile("data.csv");
                 out = openFileOutput("data.csv",MODE_APPEND);
                 writer = new OutputStreamWriter(out);
                 bw = new BufferedWriter(writer);
