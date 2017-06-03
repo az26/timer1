@@ -529,5 +529,7 @@ public class MainActivity extends AppCompatActivity {
             add = true;
         }
         generatelastdata();
+
+        Toast.makeText(this, R.string.save_complete, Toast.LENGTH_SHORT).show();
     }
 }
